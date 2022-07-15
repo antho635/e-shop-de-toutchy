@@ -3,14 +3,16 @@
 {% block content %}
 
 {% for order in orders %}
-
+<div class="product_detail">
+<div class="entete_detail">
     <h2>{{ order.product.name }}</h2>
+</div>
     <img src="{{ order.product.image.url }}" alt="{{ order.product.name }}" style="width:30%">
     <p>{{ order.quantity }} article(s) dans le panier</p>
 
 {% endfor %}
 
-<a href="{% url 'delete-cart' %}">Supprimer panier</a>
-
+<a class="btn btn-danger" href="{% url 'delete-cart' %}">Supprimer panier</a>
+</div>
 {% endblock %}
 
