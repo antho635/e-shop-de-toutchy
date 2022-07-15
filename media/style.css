@@ -1,9 +1,15 @@
 #container {
     display: flex;
+    width: 80%;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: auto;
     align-items: center;
+}
+
+.box_head {
+    display: flex;
+    justify-content: space-around;
 }
 
 .container-panier {
@@ -11,13 +17,25 @@
     flex-direction: column;
 }
 
+.nav-link {
+    margin:auto
+}
+
 .list-group {
     display: flex;
-    width: 33%;
+    position:sticky;
+    flex-direction: column;
     margin: auto;
     align-items: center;
     border: solid 1px black;
     height: 700px;
+}
+
+.product_img {
+    width:100%;
+    max-width: 400px;
+    height:100%;
+    max-height: 250px;
 }
 
 .product_box {
@@ -25,6 +43,7 @@
 }
 
 #products {
+    width: 40%;
     margin: 50px auto;
 }
 
@@ -40,6 +59,11 @@
     display: flex;
     align-items: center;
     margin: auto;
+}
+
+div.list-group {
+    width: 100%;
+    text-align: center;
 }
 
 footer {
