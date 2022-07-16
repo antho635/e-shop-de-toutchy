@@ -5,10 +5,11 @@
     flex-wrap: wrap;
     margin: auto;
     align-items: center;
+    min-height:600px
 }
 
 header {
-    background: rgb(174, 104, 57);
+    background: rgb(104, 148, 192);
     padding: 25px;
 }
 
@@ -23,9 +24,13 @@ header {
 }
 
 .nav-link {
-    margin: auto
+    margin: auto;
+    color:black;
 }
 
+.text-center{
+    color:black;
+}
 .list-group {
     display: flex;
     position: sticky;
@@ -78,6 +83,8 @@ footer {
     padding: 25px;
     justify-content: center;
     margin: auto;
+    display: flex;
+    width: 100%;
 }
 
 
