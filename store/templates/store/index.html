@@ -5,6 +5,7 @@
 {% for product in products %}
 <div id="products" class="list-group">
     <p>
+        {% load static %}
         <img class="product_img" src="{{ product.image.url }}" alt="{{ product.name }}">
     </p>
 

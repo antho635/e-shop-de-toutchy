@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="box_panier">
+    {% for order in orders %}
+    <div class="product_detail">
+        <div class="entete_detail">
+            <h2>{{ order.product.name }}</h2>
+        </div>
+        <img src="{{ order.product.image.url }}" alt="{{ order.product.name }}" style="width:30%">
+        <p>Cette article apparait {{ order.quantity }} fois dans le panier</p>
+    {% endfor %}
 
-{% for order in orders %}
-<div class="product_detail">
-<div class="entete_detail">
-    <h2>{{ order.product.name }}</h2>
-</div>
-    <img src="{{ order.product.image.url }}" alt="{{ order.product.name }}" style="width:30%">
-    <p>{{ order.quantity }} article(s) dans le panier</p>
-
-{% endfor %}
-
-<a class="btn btn-danger" href="{% url 'delete-cart' %}">Supprimer panier</a>
+        <a class="btn btn-danger" href="{% url 'delete-cart' %}">Supprimer le panier</a>
+    </div>
 </div>
 {% endblock %}
 

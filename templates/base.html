@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- SCRIPT FONTAWESOME -->
@@ -10,11 +9,13 @@
     <title>Boutique</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/media/style.css" type="text/css">
-
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
 </head>
 
     <body>
         <header>
+            {% load static %}
             <div class="box_head">
                 <a href="{% url 'index' %}">
                     <h1 class="text-center">E-shop de Toutchy</h1>
@@ -30,7 +31,9 @@
                     {% if user.cart %}
                     <p>
                         <a class="nav-link" href="{% url 'cart' %}">
-                            <img src="media/images/panier.png" alt="" style="width:25%">
+                            {% load static %}
+                            <img src="{% static 'panier.png' %}" alt="cart" style="width:30px">
+                           <!-- <img src="media/images/panier.png" alt="" style="width:25%"> -->
                         ({{ user.cart.orders.count }})</a>
                     </p>
                     {% endif %}
