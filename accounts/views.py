@@ -1,6 +1,7 @@
 from django.contrib.auth import login, get_user_model, logout, authenticate
 from django.shortcuts import render, redirect
 
+
 User = get_user_model()
 
 
@@ -38,3 +39,9 @@ def logout_user(request):
     logout(request)
 
     return redirect('index')
+
+
+# profile
+def profile(request):
+    user = request.user
+    return render(request, 'accounts/profile.html', {'user': user})
