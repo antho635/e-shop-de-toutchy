@@ -1,5 +1,5 @@
 from pathlib import Path
-import django_heroku
+# import django_heroku
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -62,7 +62,7 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -71,10 +71,9 @@ DATABASES = {
 }
 '''
 DATABASES = {
-    'default': dj_database_url.config('postgres://kqumwpldqqvuho:'
-                                      '388a2399d6a96be8ca54f19ecb2b7161b901a74fa0e091790135521d36b4f396@ec2-3-223'
-                                      '-242-224.compute-1.amazonaws.com:5432/dbja6lior1g9d8')
+    'default': dj_database_url.config('postgres://kqumwpldqqvuho:388a2399d6a96be8ca54f19ecb2b7161b901a74fa0e091790135521d36b4f396@ec2-3-223-242-224.compute-1.amazonaws.com:5432/dbja6lior1g9d8')
 }
+'''
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -120,4 +119,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "accounts.Shopper"
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
