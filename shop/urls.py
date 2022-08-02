@@ -6,6 +6,8 @@ from store.views import index, product_detail, add_to_cart, cart, delete_cart
 from shop import settings
 
 
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', index, name='index'),
