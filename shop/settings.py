@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-ki=qwe6owv!fsmpg)6$2^bn!c=@tiu(dk*j9=e03bq39dxb4!f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -113,3 +113,4 @@ MEDIA_ROOT = BASE_DIR / 'images' / 'products/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "accounts.Shopper"
+django_heroku.settings(locals())
