@@ -16,10 +16,10 @@ Product model
 
 class Product(models.Model):
     name = models.CharField(max_length=120)
-    slug = models.SlugField(max_length=120, unique=True)
+    slug = models.SlugField(max_length=520, unique=True)
     price = models.FloatField(default=0.0)
     # category = models.ForeignKey('Category', on_delete=models.CASCADE, default=1)
-    description = models.CharField(max_length=2500)
+    description = models.TextField(max_length=2500)
     image = models.ImageField(upload_to='products', blank=True, null=True)
     stock = models.IntegerField(default=0)
 

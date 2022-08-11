@@ -71,7 +71,13 @@ DATABASES = {
 }
 '''
 DATABASES = {
-    'default': dj_database_url.config('postgres://kqumwpldqqvuho:388a2399d6a96be8ca54f19ecb2b7161b901a74fa0e091790135521d36b4f396@ec2-3-223-242-224.compute-1.amazonaws.com:5432/dbja6lior1g9d8')
+    'default': dj_database_url.config('postgres://kqumwpldqqvuho:388a2399d6a96be8ca54f19ecb2b7161b901a74fa0e091790135521d36b4f396@ec2-3-223-242-224.compute-1.amazonaws.com:5432/dbja6lior1g9d8'),
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'dbja6lior1g9d8',
+    'USER': 'kqumwpldqqvuho',
+    'PASSWORD': '388a2399d6a96be8ca54f19ecb2b7161b901a74fa0e091790135521d36b4f396',
+    'HOST': 'ec2-3-223-242-224.compute-1.amazonaws.com',
+    'PORT': '5432',
 }
 '''
 # Password validation
@@ -119,4 +125,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "accounts.Shopper"
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
