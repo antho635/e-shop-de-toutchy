@@ -12,7 +12,7 @@ Deprecated==1.2.13
 distlib==0.3.5
 dj-config-url==0.1.1
 dj-database-url==1.0.0
-Django==4.1
+Django==4.1.1
 django-on-heroku==1.1.2
 django-shortcuts==1.6
 django-six==1.0.4
