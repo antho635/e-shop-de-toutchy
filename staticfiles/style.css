@@ -1,0 +1,112 @@
+#container {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    min-height:600px
+}
+
+header {
+    background: rgb(104, 148, 192);
+    padding: 25px;
+}
+
+.box_head {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-panier {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    margin: auto;
+    color:black;
+}
+
+.text-center{
+    color:black;
+}
+.list-group {
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    border: solid 1px green;
+    height: 550px;
+}
+
+#products {
+    width: 40%;
+    margin: 50px auto;
+    padding: 50px !important;
+}
+
+.product_img {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 250px;
+}
+
+.product_box {
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container-detail {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+div.list-group {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background: rgb(104, 148, 192);
+    height: auto;
+    padding: 25px;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 100%;
+}
+
+/* Élément | http://127.0.0.1:8000/cart/ */
+
+.entete_detail {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.product_detail {
+    margin: 30px auto;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+}
+
+.product_detail>img:nth-child(2) {
+    width: 66%;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
