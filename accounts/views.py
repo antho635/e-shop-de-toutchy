@@ -1,7 +1,6 @@
 from django.contrib.auth import login, get_user_model, logout, authenticate
 from django.shortcuts import render, redirect
 
-
 User = get_user_model()
 
 
@@ -44,4 +43,18 @@ def logout_user(request):
 # profile
 def profile(request):
     user = request.user
+
     return render(request, 'accounts/profile.html', {'user': user})
+
+
+def update_profile(request):
+    if request.method == 'POST':
+        # traiter le formulaire
+        user = request.user
+        user.username = request.POST.get('username')
+        user.last_name = request.POST.get('last_name')
+        user.first_name = request.POST.get('first_name')
+        user.save()
+        return redirect('profile')
+
+    return render(request, 'accounts/update-profile.html')
